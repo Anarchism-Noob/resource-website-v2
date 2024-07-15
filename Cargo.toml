@@ -1,0 +1,9 @@
+[workspace]
+members = ["rsws-bin", "rsws-core", "rsws-system"]
+resolver = "2"
+
+[workspace.dependencies]
+rsws-bin = { path = "rsws-bin" }
+rsws-core = { path = "rsws-core" }
+rsws-system = { path = "rsws-system" }
+
