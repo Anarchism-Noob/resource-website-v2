@@ -1,11 +1,11 @@
 [package]
-name = "rsws-bin"
+name = "rsws_bin"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rsws-core = { path = "../rsws_core" }
-rsws-system = { path = "../rsws_system" }
+rsws_core = { path = "../rsws_core" }
+rsws_system = { path = "../rsws_system" }
 
 anyhow = { workspace = true }
 tokio = { workspace = true }

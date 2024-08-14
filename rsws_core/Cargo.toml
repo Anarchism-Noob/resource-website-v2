@@ -1,6 +1,27 @@
 [package]
-name = "rsws-core"
+name = "rsws_core"
 version = "0.1.0"
 edition = "2021"
 
+[dev-dependencies]
+rsws_core = { workspace = true }
+tracing-test = { workspace = true }
+
+[features]
+default  = []
+
 [dependencies]
+serde_yaml = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+argon2 = { workspace = true }
+tracing = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+jwt-simple = { workspace = true }
+tokio = { workspace = true }
+chrono = { workspace = true }
+sea-orm = { workspace = true }
+salvo = { workspace = true }
+askama = { workspace = true }
+idgenerator = { workspace = true }

@@ -3,9 +3,9 @@ members = ["rsws_bin", "rsws_core", "rsws_system"]
 resolver = "2"
 
 [workspace.dependencies]
-rsws-bin = { path = "rsws_bin" }
-rsws-core = { path = "rsws_core" }
-rsws-system = { path = "rsws_system" }
+rsws_bin = { path = "rsws_bin" }
+rsws_core = { path = "rsws_core" }
+rsws_system = { path = "rsws_system" }
 
 anyhow = "1.0.86"
 argon2 = { version = "0.5.3", features = ["std"] }
