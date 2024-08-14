@@ -1,0 +1,5 @@
+﻿server:
+  port: 2418
+  db_url: posttgres://anarchism:99158194@192.168.1.141:5432/rsws_db
+  base_dir: /tmp/rsws_server
+
