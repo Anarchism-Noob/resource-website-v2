@@ -4,5 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-idgenerator = "2.0.0"
-uuid = { version = "1.10.0", features = ["v7", "fast-rng", "macro-diagnostics"] }
+rsws-core = { path = "../rsws-core" }
+rsws-system = { path = "../rsws-system" }
+
+anyhow = { workspace = true }
+tokio = { workspace = true }
+salvo = { workspace = true }
+tracing = { workspace = true, features = ["compression"] }
+tracing-subscriber = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
