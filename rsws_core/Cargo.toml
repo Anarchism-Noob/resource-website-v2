@@ -25,3 +25,4 @@ sea-orm = { workspace = true }
 salvo = { workspace = true }
 askama = { workspace = true }
 idgenerator = { workspace = true }
+lettre = { workspace = true }

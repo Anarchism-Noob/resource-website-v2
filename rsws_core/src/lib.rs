@@ -1,17 +1,10 @@
-mod error;
-mod config;
+pub mod constants;
+pub mod config;
+pub mod error;
+pub mod middlewares;
+pub mod utils;
 
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use config::AppConfig;
+pub use error::{AppError, AppResult, ErrorOutput};
+use std::{fmt, ops::Deref, sync::Arc};
+use tokio::sync::OnceCell;

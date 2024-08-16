@@ -29,3 +29,6 @@ sea-orm = { version = "1.1.0-rc.1", features = ["runtime-tokio-native-tls", "sql
 #id
 idgenerator = "2.0.0"
 
+#mail
+lettre = "0.11.7"
+
