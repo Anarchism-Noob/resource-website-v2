@@ -8,15 +8,9 @@ rsws_core = { path = "rsws_core" }
 rsws_system = { path = "rsws_system" }
 
 anyhow = "1.0.86"
-argon2 = { version = "0.5.3", features = ["std"] }
 chrono = { version = "0.4.38", features = ["serde"] }
 jwt-simple = "0.12.9"
-serde = { version = "1.0.207", features = ["derive"] }
-serde_yaml = "0.9.34"
-serde_json = "1.0.124"
 thiserror = "1.0.63"
-tokio = { version = "1.39.2", features = ["rt", "rt-multi-thread", "macros"] }
-salvo = { git="https://github.com/salvo-rs/salvo", features = ["oapi", "jwt-auth", "cors", "anyhow", "compression", "serve-static"] }
 tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 tracing-test = "0.2.5"
@@ -29,6 +23,17 @@ sea-orm = { version = "1.1.0-rc.1", features = ["runtime-tokio-native-tls", "sql
 #id
 idgenerator = "2.0.0"
 
-#mail
+#email
 lettre = "0.11.7"
 
+#序列化
+serde = { version = "1.0.207", features = ["derive"] }
+serde_yaml = "0.9.34"
+serde_json = "1.0.124"
+
+#密码
+argon2 = { version = "0.5.3", features = ["std"] }
+
+#web框架
+tokio = { version = "1.39.2", features = ["rt", "rt-multi-thread", "macros"] }
+salvo = { git="https://github.com/salvo-rs/salvo", features = ["oapi", "jwt-auth", "cors", "anyhow", "compression", "serve-static"] }
