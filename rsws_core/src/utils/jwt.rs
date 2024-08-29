@@ -1,5 +1,5 @@
-use crate::UserClaims;
 use jwt_simple::prelude::*;
+use crate::utils::UserClaims;
 
 const JWT_DURATION: u64 = 60 * 60 * 24 * 7;
 const JWT_ISS: &str = "rsws_server";
