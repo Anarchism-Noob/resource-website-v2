@@ -1,11 +1,12 @@
 [workspace]
-members = ["rsws_bin", "rsws_core", "rsws_system"]
+members = ["rsws_bin", "rsws_core", "rsws_custom", "rsws_system"]
 resolver = "2"
 
 [workspace.dependencies]
 rsws_bin = { path = "rsws_bin" }
 rsws_core = { path = "rsws_core" }
 rsws_system = { path = "rsws_system" }
+rsws_custom = { path = "rsws_custom" }
 
 anyhow = "1.0.86"
 chrono = { version = "0.4.38", features = ["serde"] }

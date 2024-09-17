@@ -1,0 +1,19 @@
+[package]
+name = "rsws_custom"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rsws_core = { path = "../rsws_core" }
+
+anyhow = { workspace = true }
+argon2 = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+sea-orm = { workspace = true }
+tracing = { workspace = true }
+idgenerator = { workspace = true }
+salvo = { workspace = true }
+askama = { workspace = true }
+rust-embed = { workspace = true }

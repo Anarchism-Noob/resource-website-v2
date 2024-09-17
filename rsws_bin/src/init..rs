@@ -20,5 +20,5 @@ use rsws_system::get_system_router;
 
 pub async fn create_service() -> salvo::Service{
     let router = get_app_router();
-    let doc = OpenApi::new("rsws api", "0.0.1").merge_router(&router);
+    let doc = OpenApi::new("RSWS Service api", "0.0.1").merge_router(&router);
 }

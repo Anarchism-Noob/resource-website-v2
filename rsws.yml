@@ -3,3 +3,12 @@
   db_url: posttgres://anarchism:99158194@192.168.1.141:5432/rsws_db
   base_dir: /tmp/rsws_server
 
+auth:
+  sk: |
+    -----BEGIN PRIVATE KEY-----
+    MC4CAQAwBQYDK2VwBCIEIGovJfYjBCdEd30q0hv59z8BgCIqBQSuqeFBaUzrFPSD
+    -----END PRIVATE KEY-----
+  pk: |
+    -----BEGIN PUBLIC KEY-----
+    MCowBQYDK2VwAyEAAs4CYMpBDXKfrMaayL01hviDgHKnFlGhCzxzXtdDuvI=
+    -----END PUBLIC KEY-----
