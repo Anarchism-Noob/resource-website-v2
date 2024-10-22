@@ -1,16 +1,18 @@
 pub use config::AppConfig;
-pub use error::{APPError, APPResult, ErrorOutput};
+pub use error::{AppError, AppResult, ErrorOutput};
 use sea_orm::Database;
 use sea_orm::DatabaseConnection;
 use std::{fmt, ops::Deref, sync::Arc};
+use salvo::oapi::KnownFormat::Duration;
 use tokio::sync::OnceCell;
 pub use utils::{get_request_id, UserClaims};
-use utils::{DecodingKey, EncodingKey, TokenVerify};
+use utils::{DecodingKey, EncodingKey};
 pub mod config;
 pub mod constants;
 pub mod error;
 pub mod middlewares;
 pub mod utils;
+mod router;
 
 pub static CORE_SERVICE: OnceCell<CoreService> = OnceCell::const_new();
 
@@ -70,16 +72,8 @@ impl Deref for CoreService {
     }
 }
 
-impl TokenVerify for CoreService {
-    type Error = APPError;
-
-    fn verify(&self, token: &str) -> Result<UserClaims, Self::Error> {
-        Ok(self.dk.verify(token)?)
-    }
-}
-
 impl CoreService {
-    async fn try_new() -> Result<Self, APPError> {
+    async fn try_new() -> Result<Self, AppError> {
         let config = AppConfig::load()?;
 
         let mut connect_options = sea_orm::ConnectOptions::new(config.server.db_url.clone());
